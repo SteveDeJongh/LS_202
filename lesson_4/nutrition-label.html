@@ -19,6 +19,7 @@
       h1 {
         font-family: "Franklin Gothic Heavy", Arial, sans-serif;
         margin: 0px;
+        font-size: 2rem;
       }
 
       header p {
@@ -87,8 +88,12 @@
         border-top: 1px solid black;
       }
 
-      tbody + tbody tr:first-of-type {
+      tbody + tbody tr:first-of-type td {
         border-top: 20px solid black;
+      }
+
+      tbody + tbody tr td:last-of-type {
+        font-weight: normal;
       }
 
       tr td:last-of-type {
@@ -142,6 +147,10 @@
         width: auto;
         text-indent: 1.2rem;
       }
+
+      sup {
+        vertical-align: 3px;
+      }
     </style>
   </head>
   <body>
@@ -155,8 +164,7 @@
         <dl>
           <dt>Calories</dt>
           <dd>230</dd>
-        </dl><!--
-        --><dl>
+        </dl><dl>
           <dt>Calories from Fat</dt>
           <dd>40</dd>
         </dl>
@@ -264,27 +272,27 @@
         </tbody>
         <tbody>
           <tr>
-            <th colspan="2" scope="row">
+            <td colspan="2" scope="row">
               Vitamin A
-            </th>
+            </td>
             <td>10%</td>
           </tr>
           <tr>
-            <th colspan="2" scope="row">
+            <td colspan="2" scope="row">
               Vitamin C
-            </th>
+            </td>
             <td>8%</td>
           </tr>
           <tr>
-            <th colspan="2" scope="row">
+            <td colspan="2" scope="row">
               Calcium
-            </th>
+            </td>
             <td>20%</td>
           </tr>
           <tr>
-            <th colspan="2" scope="row">
+            <td colspan="2" scope="row">
               Iron
-            </th>
+            </td>
             <td>45%</td>
           </tr>
         </tbody>
