@@ -9,35 +9,40 @@
   <body>
     <form action="#" method="post">
       <fieldset>
-        <dl>
+        <dl class="partial one-half left">
           <dt>
             <label for="first-name">First name</label>
           </dt>
           <dd>
             <input type="text" name="first-name" id="first-name" >
           </dd>
-          
+        </dl><!--
+        --><dl class="partial one-half right">  
           <dt>
             <label for="last-name">Last name</label>
           </dt>
           <dd>
             <input type="text" name="last-name" id="last-name">
           </dd>
-
+        </dl>
+        <dl>
           <dt>
             <label for="email">Email</label>
           </dt>
           <dd>
             <input type="email" name="first-name" id="email" placeholder="ex@example.com">
           </dd>
-
+        </dl>
+        
+        <dl class="partial one-half left">
           <dt>
             <label for="city">City</label>
           </dt>
           <dd>
             <input type="text" name="city" id="city">
           </dd>
-
+        </dl><!-- 
+        --><dl class="partial one-tenth both">
           <dt>
             <label for="state">State</label>
           </dt>
@@ -96,14 +101,16 @@
               <option>WY</option>
             </select>
           </dd>
-
+        </dl><!--
+        --><dl class="partial four-tenths right>
           <dt>
             <label for="zipcode">Zipcode</label>
           </dt>
           <dd>
             <input type="number" name="zipcode" id="zipcode" placeholder="#####" min="00001" max="99999">
           </dd>
-
+        </dl>
+        <dl>
           <dt>
             <label for="color">Which of these colors do you like best?</label>
           </dt>
@@ -120,7 +127,8 @@
               </li>
             </ul>
           </dd>
-
+        </dl>
+        <dl>
           <dt>
             <label for="web-tech">Which web technologies do you want to learn?</label>
           </dt>
@@ -143,7 +151,8 @@
               </li>
             </ul>
           </dd>
-
+        </dl>
+        <dl>
           <dt>
             <label for="comment">Comments</label>
           </dt>
