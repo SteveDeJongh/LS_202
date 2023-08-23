@@ -33,7 +33,7 @@
         <dl>
           <dt><label for="phone">Phone number</label></dt>
           <dd>
-            <input type="tel" name="phone" id="phone" required>
+            <input type="tel" name="phone" id="phone" placeholder="###-###-####" required>
           </dd>
 
           <dt><label for="phone-type">Phone type</label></dt>
@@ -46,8 +46,71 @@
           </dd>
         </dl>
 
+        <dl>
+          <dt><label for="message">Message</label></dt>
+          <dd>
+            <textarea name="message" id="message" rows="6" cols="80"
+                      placeholder="Type your message here."></textarea>
+          </dd>
+        </dl>
+
         <input type="submit" value="Send">
       </fieldset>
+    </form>
+
+    <form action="#" method="get">
+      <filedset>
+        <label for="query">
+          Search for
+          <input type="search" name="query" id="query">
+        </label>
+
+        <label>
+          <input type="radio" name="filter" value="tv" required>
+          TV
+        </label>
+
+        <label>
+          <input type="radio" name="filter" value="movies" required>
+          Movies
+        </label>
+
+        <label>
+          <input type="radio" name="filter" value="music" required>
+          Music
+        </label>
+
+        <button name="search">Search</button>
+      </filedset>
+    </form>
+
+    <form>
+      <fieldset>
+        <dl>
+        <dt><label for="title">Movie</label></dt>
+          <dd>
+            <select name="title" id="title">
+              <option value="Looper">Looper</option>
+              <option value="Frozen">Fozen</option>
+              <option value="Tommy Boy">Tommy Boy</option>
+          </select>
+        </dd>
+
+        <dt><label for="rating">Rating</label></dt>
+          <dd>
+            <input type="number" name="rating" id="rating" min="1" max="5">
+          </dd>
+        </dl>
+
+        <div>
+          <label>
+            <input type="checkbox" name="favorite" checked>
+            Add to my favorites
+          </label>
+        </div>
+
+        <input type="submit" value="Rate movie">
+       </fieldset>
     </form>
   </body>
 </html>
