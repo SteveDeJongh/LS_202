@@ -14,9 +14,10 @@
       }
 
       section {
-        width: 750px;
+        max-width: 1000px;
         margin: 0 auto;
         background-color: white;
+        /* overflow: hidden; */
       }
 
       article, aside {
@@ -27,12 +28,19 @@
 
       article {
         background-color: green;
-        width: 500px;
+        width: 70%;
       }
 
       aside {
-        width: 250px;
+        float: none;
+        overflow: hidden;
         background-color: red;
+      }
+
+      footer {
+        padding: 1rem;
+        background-color: purple;
+        clear: both;
       }
 
     </style>
@@ -49,6 +57,9 @@
       <aside>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus augue risus, id gravida eros vehicula eget. Donec id nibh vel ligula ullamcorper scelerisque at in velit. Donec at rutrum dui, in maximus enim. Quisque a suscipit diam, vel mattis libero. Sed in sem commodo, tempor nisi vel, porta velit. Aenean a felis ultricies, efficitur massa efficitur, aliquam est. Integer nec magna orci. Aliquam congue lorem orci, sit amet ornare ipsum pulvinar at. Praesent feugiat risus id neque cursus malesuada. Ut ac tempus nisl. Aenean ornare eu nulla vitae molestie. Vivamus vel magna mi. Mauris in porta ligula. Maecenas dictum ligula vitae dignissim lacinia. Proin dapibus leo quis felis suscipit, in fermentum ex pretium.</p>
       </aside>
+      <footer>
+        <p>Maecenas mollis condimentum purus eget cursus. Morbi quis dolor quis nisl porta ornare id quis justo. Integer sollicitudin dapibus erat in fringilla. Suspendisse vestibulum nisl odio, ut pretium metus suscipit non. Curabitur in eros risus. Vivamus eget sodales enim, nec condimentum tellus. Vestibulum sollicitudin vulputate orci non tempus. Nam non enim nisi. Quisque at purus felis. Duis molestie a quam at laoreet.</p>
+      </footer>
     </section>
   </body>
 </html>
