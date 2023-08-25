@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice Problems Positioning</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      section {
+        border: 8px solid #cecece;
+      }
+
+      .first {
+        background-color: beige;
+        position: fixed;
+        width: 400px;
+        padding: 30px 15px;
+        left: 50%;
+        margin-left:-200px;
+        top: 20px;
+        z-index: 2;
+      }
+
+      .second {
+        background-color: rgba(0, 0, 0, .6);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        left: 0;
+        top: 0;
+      }
+
+      .third {
+        background-color: pink;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: -10px;
+        top: -10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dolor mi, lobortis sit amet orci quis, tristique tempus nulla. Nulla facilisi. Pellentesque aliquam sit amet velit condimentum tristique. Morbi facilisis nisi eu ipsum ultrices, nec ornare arcu aliquam. Etiam accumsan tellus eu sem eleifend rhoncus. Quisque vestibulum, purus commodo varius euismod, mauris purus sodales lacus, quis posuere risus mauris id urna. Etiam dapibus elementum nulla sed dignissim.</p>
+      <p>Ut purus ligula, feugiat sed tortor a, consectetur volutpat felis. Sed id lobortis nisl. Ut pretium lectus magna, eget vestibulum orci volutpat at. Aliquam varius ut elit vitae fermentum. Suspendisse vestibulum purus ligula, eget porta leo elementum eget. Nam vel fermentum ex. Vestibulum vitae dignissim risus. Phasellus sagittis magna in justo dignissim, et suscipit est mollis. Vestibulum molestie commodo metus quis condimentum. Quisque auctor at tellus ac tincidunt. Phasellus est nibh, sollicitudin at convallis sit amet, feugiat vitae dolor. Nam posuere libero in diam commodo dictum. Morbi varius consectetur accumsan.</p>
+      <p>Maecenas vitae lacus arcu. Suspendisse commodo lorem mauris, in feugiat erat congue sed. Integer vitae diam erat. Proin sed magna at nibh malesuada lacinia ac sodales mi. Sed cursus, ligula quis molestie efficitur, dolor ex aliquet sapien, et rhoncus lacus erat ac mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sit amet ornare dui.</p>
+      <p>In eget dolor in risus vehicula ultricies. Nunc sed mattis enim. Nullam et nunc non justo eleifend maximus sed non ex. Ut at fringilla purus, vitae vehicula quam. Duis fermentum nisl a nisl tristique iaculis sed at eros. Duis congue feugiat hendrerit. Sed nec condimentum ligula, quis viverra quam. Curabitur porta eleifend arcu, at placerat ante fringilla nec. In ut massa feugiat, iaculis metus at, dictum enim. Aenean in neque eget purus bibendum feugiat. Praesent tristique facilisis nulla eu placerat.</p>
+      <p>Mauris et tortor convallis, fringilla neque non, commodo velit. Mauris cursus, diam at semper aliquet, erat diam laoreet purus, a aliquet nunc elit vel sapien. Vestibulum accumsan enim quis sem venenatis lobortis. Maecenas augue nulla, consectetur sed elit in, dapibus lacinia est. Vivamus eu dui at quam commodo congue. Nam quis tristique mauris, quis pulvinar metus. Suspendisse varius magna at odio accumsan fringilla. Suspendisse vitae varius nisi.</p>
+      <p>Sed massa nulla, fermentum et massa vel, porta placerat ligula. Nam congue sed libero varius vestibulum. Nulla felis dui, vehicula eu sapien sit amet, bibendum imperdiet mi. Aliquam fringilla justo metus, vel vehicula magna sagittis in. Donec lacinia lorem est, in consequat neque placerat eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus vitae lacinia magna, nec ornare risus. Sed gravida mi eget orci sagittis malesuada. Nunc at mi sed nibh finibus elementum.</p>
+      <p>Sed lobortis malesuada imperdiet. Etiam pellentesque vestibulum condimentum. Vivamus finibus augue ultricies porta rhoncus. Nunc efficitur augue non est imperdiet finibus. Mauris in mi eros. Curabitur quis odio sed elit consectetur pulvinar at et turpis. In dapibus a ex eget pharetra. Cras ultrices turpis ac turpis varius tristique. Cras sit amet diam at dui pharetra aliquet sed a ipsum. Sed nec vehicula nunc. In nec euismod nunc, a ullamcorper libero. Morbi ut venenatis mauris. Phasellus pharetra risus vel rhoncus eleifend. Quisque odio nulla, rutrum non arcu condimentum, tempor elementum nisl. Integer semper leo nec dui dapibus facilisis. Proin condimentum ipsum ipsum, ut tempus ex feugiat vitae.</p>
+      <p>Duis scelerisque velit nec est ullamcorper mattis. Aliquam velit felis, porttitor vel condimentum vitae, tincidunt id metus. In facilisis eget nibh non aliquet. Morbi interdum quam mauris, accumsan imperdiet diam blandit sed. Sed sed mauris elementum, consectetur turpis in, maximus elit. Donec porta vestibulum lacus vel ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam nec leo tristique, semper neque at, elementum nisi. Fusce ullamcorper diam a ultrices faucibus. Nulla sodales imperdiet purus, at sagittis ante scelerisque quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas hendrerit et sem id tincidunt. Duis sed ipsum tempor, elementum felis eu, viverra libero.</p>
+      <p>Aliquam dolor neque, blandit a ligula eget, ultrices accumsan ante. Nunc interdum dictum suscipit. Sed tempus ornare sem, quis tincidunt enim euismod non. Proin hendrerit diam sed arcu mollis vehicula. Donec tincidunt risus a elit iaculis sodales. Cras lacinia, massa sit amet posuere ultricies, sapien leo rutrum mauris, sed scelerisque dolor diam ut dui. Mauris eget arcu at orci ultrices molestie ac et elit. Duis quis justo ac tortor lobortis pulvinar. Donec rhoncus sed sapien et rutrum. Curabitur accumsan id sem eget consectetur. Nam ullamcorper purus ipsum, sit amet laoreet ex luctus non. Nunc mattis, eros vitae aliquam commodo, lorem diam viverra sem, non imperdiet elit erat a dolor. Maecenas sit amet lacus enim. In felis nisi, ullamcorper quis bibendum quis, cursus sed urna.</p>
+      <p>Nunc consequat massa non blandit rutrum. Sed ac augue quis tortor tincidunt vehicula at sit amet tellus. Integer convallis elit nec eros varius sodales. Cras id ornare est. Nullam ornare laoreet purus id vulputate. Donec consectetur, metus eget molestie interdum, ex purus tristique massa, at molestie ex purus nec purus. Nulla quis vestibulum arcu, ut ultrices leo. Fusce ullamcorper gravida ex, in rutrum velit hendrerit ac. Vivamus libero dolor, lobortis imperdiet felis vitae, porta lacinia dolor. Fusce eu ipsum ut mauris ultrices accumsan a eget risus. In hac habitasse platea dictumst. Praesent a lectus tortor. Nulla leo libero, ultricies et fringilla eget, posuere nec est. Integer vitae tellus enim. Phasellus volutpat, est a venenatis rhoncus, ipsum ex dignissim erat, eu blandit ex metus sit amet orci.</p>
+    </section>
+
+    <div class="second">Second positioned element</div>
+
+    <div class="first">
+      I'm positioned!
+      <div class="third">Third</div>
+    </div>
+  </body>
+</html>
