@@ -45,3 +45,40 @@ nav {
   background-color:#91aa9d ;
   color: #fcfff5;
  }
+
+ main {
+  box-sizing: border-box;
+  overflow: hidden;
+  clear: both;
+  margin: 0 auto;
+  width: 960px;
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0 5px 5px #b5b5b5;
+ }
+
+ img.masthead {
+  margin: 0 0 40px 0; 
+ }
+
+ h2 {
+  padding: 0 0 25px 0;
+  font-size: 32px;
+  font-weight: normal;
+ }
+
+ p {
+  padding: 0 0 20px 0;
+ }
+
+ figure {
+  float: right;
+  padding: 0 0 0 30px;
+ }
+
+ footer {
+  width: 960px;
+  padding: 15px 0;
+  margin: 0 auto;
+  font-size: 14px;
+ }
