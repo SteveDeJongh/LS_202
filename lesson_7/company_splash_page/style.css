@@ -1,0 +1,84 @@
+@import url("../../reset.css");
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font: 400 20px 'Nunito', Helvetica, sans-serif;
+}
+
+body {
+  background: #2f2840 url("bg_body.gif");
+  color: #45494d;
+  padding: 75px 0 50px;
+}
+
+header, main, footer {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 76px 0 0 1px;
+  padding: 0 0 50px;
+  text-align: center;
+}
+
+img {
+  vertical-align: center;;
+}
+
+main {
+  display: block;
+  margin-top: 44px;
+  padding: 70px 0;
+  background-color: #ffffff;
+  color: black;
+  text-align: center;
+}
+
+article {
+  font-size: 1rem;
+  letter-spacing: 0.01rem;
+  margin-bottom: 158px;
+  padding: 0 90px 0px;
+}
+
+article + article {
+  margin-bottom: -5px;
+}
+
+h2 {
+  font: 600 1.8rem "Nunito Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+
+h3 {
+  background-color: inherit;
+  color: #3e98b2;
+  font: 800 1.2rem "Nunito Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.04rem;
+  margin: 20px;
+}
+
+p {
+  line-height: 28px;
+  margin: 22px 0 0;
+}
+
+footer {
+  background-color: #e7e7e7;
+  color: inherit;
+  margin-bottom: 85px;
+  padding: 33px 0;
+}
+
+ul {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline;
+  padding: 0 58px;
+}
