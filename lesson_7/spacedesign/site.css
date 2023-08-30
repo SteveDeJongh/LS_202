@@ -41,7 +41,7 @@ main {
 }
 
 .column {
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -68,6 +68,43 @@ h3 {
 
 article {
   padding: 0 0 100px 0;
+}
+
+article p {
+  padding: 0 110px;
+}
+
+#projects figure {
+  padding: 0 0 55px 0;
+}
+
+#projects img {
+  display: block;
+}
+
+#team p {
+  padding: 0 120px 120px 120px;
+}
+
+#team ul {
+  padding: 0 0 225px 0;
+}
+
+#team li {
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 24px;
+}
+
+#team li a {
+  color: #003fae;
+  text-decoration: none;
+  padding: 10px 0 0 0;
+}
+
+#team li img {
+  display: block;
+  margin: 0 0 25px 0;
 }
 
 footer {
