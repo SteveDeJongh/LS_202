@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background: #2f2840 url("bg_body.gif");
+  background: #2f2840 url("bg_body.gif"); /* Color is a backup if image can't be loaded */
   color: #45494d;
   padding: 75px 0 50px;
 }
@@ -17,7 +17,7 @@ header, main, footer {
 }
 
 h1 {
-  margin: 76px 0 0 1px;
+  margin: 75px 0 0 1px;
   padding: 0 0 50px;
   text-align: center;
 }
