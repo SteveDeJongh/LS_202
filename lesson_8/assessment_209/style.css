@@ -1,27 +1,120 @@
-@import url("../../reset.css");
+/*
+----------------------------------------
+Tantek Celik's Whitepsace Reset
+     Author:    Tantek Celik, Shane Riley
+    Version:    (CC) 2010 Some Rights Reserved
+                - http://creativecommons.org/licenses/by/2.0
+Description:  Resets default styling of common browsers to a common base
+----------------------------------------
+*/
+
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5, h6, pre, code { font-size: 1rem; }
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote,
+fieldset, input, dl, dt, dd, figure, figcaption, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+a img, :link img, :visited img, fieldset { border: none; }
+address { font-style: normal; }
+
+header, section, article, nav, footer, hgroup, details, summary, figure, main {
+  display: block;
+}
+
+mark {
+  color: inherit;
+  background: transparent;
+}
+
+abbr { border: none; }
+summary::-webkit-details-marker { display: none; }
+
+/*
+----------------------------------------
+End of Tantek Celik's Whitepsace Reset
+----------------------------------------
+*/
+
+
+/*
+----------------------------------------
+General styling
+----------------------------------------
+*/
+
+* { 
+  letter-spacing: 0.05em;
+}
+
+html {
+  font: 16px Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+h2 {
+ font-weight: normal;
+}
+
+li,
+label,
+button {
+  cursor: pointer;
+}
+
+
+/*
+----------------------------------------
+General Layout
+----------------------------------------
+*/
 
 body {
-  font: normal 16px Helvetica, Arial, sans-serif;
-  display: flex;
   color: #060606;
+  display: flex;
   min-height: 100vh;
 }
 
+
+/*
+----------------------------------------
+Navigation
+----------------------------------------
+*/
+
 nav {
   background-color: #464f77;
-  color: #ffffff;
-  flex-basis: 345px;
+  color: white;
+  flex-basis: 335px;
   flex-shrink: 0;
   overflow: hidden;
-  padding-top: 60px;
+  padding-top: 60px
 }
 
-main {
-
+nav .selected {
+  background-color: #38405e;
+  color: white;
 }
 
-h1, h2 {
-  font-weight: normal;
+nav li {
+  align-items: center;
+  color: #b2b5c3;
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+  padding-left: 137px;
+  padding-right: 32px;
+}
+
+nav li.selected,
+nav li:hover {
+   background-color: #38405e;
+}
+
+nav ul.completed li {
+  text-decoration-line: line-through;
 }
 
 h2 {
@@ -31,10 +124,24 @@ h2 {
   padding-right: 32px;
 }
 
-.all-todos {
+h2.all-todos {
+  align-items: center;
+  background: url("images/all-todos.png") 102px no-repeat;
   display: flex;
   justify-content: space-between;
 }
+
+h2.completed {
+  background: url("images/done.png") 102px no-repeat;
+  margin-top: 44px;
+}
+
+
+/*
+----------------------------------------
+Todo Count Badge
+----------------------------------------
+*/
 
 .badge {
   background-color: #6b7292;
@@ -52,61 +159,393 @@ h2 {
   background-color: #148fd5;
 }
 
-h2.all-todos {
+h1 .badge {
+  margin-left: 17px;
+}
+
+
+/*
+----------------------------------------
+Main area with the list of todos
+----------------------------------------
+*/
+
+main {
+  background-color: white;
+  flex-grow: 1;
+  margin: 24px 100px 0 20px;
+  position: relative;
+}
+
+main h1 {
   align-items: center;
-  background: url("images/all-todos.png") 102px no-repeat;
+  display: flex;
+  font-size: 21px;
+  line-height: 48px;
+  margin-bottom: 11px;
+  margin-top: 11px;
+  padding-left: 12px;
+}
+
+main li {
+  border-top: 1px solid #e7e7e7;
   display: flex;
   justify-content: space-between;
+  line-height: 48px;
 }
 
-h2.completed {
-  background: url("images/done.png") 102px no-repeat;
-  margin-top: 44px;
-}
-
-li, label, button {
-  cursor: pointer;
-}
-
-nav li {
-  align-items: center;
-  color: #b2b5c3;
-  display: flex;
-  justify-content: space-between;
-  line-height: 40px;
-  padding-left: 137px;
-  padding-right: 32px;
-}
-
-nav .selected {
-  color: white;
-}
-
-nav li.selected, nav li:hover {
-  background-color: #38405e;
-}
-
-nav ul.completed li {
-  text-decoration-line: line-through;
+label[for="nav-toggle"] {
+  background: url("images/hamburger.png") center / contain no-repeat;
+  color: transparent;
+  display: block;
+  height: 24px;
+  margin-left: 11px;
+  width: 24px;
+  visibility: hidden;
 }
 
 #nav-toggle {
   display: none;
 }
 
-/* 
-Navigation area colors:
-Background: #464f77
-Selected item background color: #38405e
-Blue circles background color: #148fd5
-Gray circles background color: #6b7292
-White characters color: #ffffff
-Dim characters color: #b2b5c3
-Todo Area and Modal Colors
-Background: #ffffff
-Black text: #060606
-Dim text: #b3b3b3
-Blue text and circles: #148fd5
-Blue buttons background: #148fd5
-Lines between todo items: #e7e7e7 
+input[name="nav-toggle"]:checked + nav {
+  flex-basis: 335px;
+}
+
+label[for="modal-toggle"] {
+  flex: auto;
+}
+
+label[for="modal-toggle"] > span {
+  display: block;
+}
+
+main li span {
+  background: url("images/unticked-box.png") 12px no-repeat;
+  flex: auto;
+  margin-right: 32px;
+  padding-left: 38px;
+}
+
+main li.completed span {
+  background-image: url("images/ticked-box.png");
+  color: #b3b3b3;
+  text-decoration-line: line-through;
+}
+
+main li span:hover {
+  background-color: rgba(20, 143, 213, .04);
+  color: #148fd5;
+}
+
+
+/*
+----------------------------------------
+Modal
+----------------------------------------
 */
+
+select {
+     -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  background-image: url("images/select.png");
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  background-size: 10px 15px;
+}
+
+input[type="text"],
+select {
+  height: 36px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+input[type="text"],
+textarea,
+select {
+  box-sizing: border-box;
+  border: 1px solid #b3b3b3;
+  font: 16px / 1.25 Helvetica, "Helvetica Neue", Arial, sans-serif;
+  padding: 0 8px;
+}
+
+textarea {
+  height: 144px;
+  padding-top: 7px;
+  resize: none;
+}
+
+#modal {
+  background-color: white;
+  box-sizing: border-box;
+  display: none;
+  height: 400px;
+  line-height: 36px;
+  padding: 37px 39px 39px 30px;
+  width: 575px;
+}
+
+#modal fieldset {
+  /*background-color: thistle;*/
+  /*display: flex;*/
+  margin-bottom: 24px;
+}
+
+dl {
+  display: flex;
+  width: 100%;
+}
+
+dt:first-child {
+  flex-basis: 110px;
+  flex-shrink: 0;
+}
+
+dt span.invisible {
+  display: none;
+}
+
+dd {
+  flex-grow: 1;
+}
+
+#modal select {
+  width: 116px;
+}
+
+.select-separator {
+  display: inline-block;
+  text-align: center;
+  width: 24px;
+}
+
+.modal-buttons {
+  display: flex;
+  margin-left: 110px;
+}
+
+.modal-buttons button {
+  border: 0;
+  border-radius: 4px;
+  background-color: #148fd5;
+  color: white;
+  height: 36px;
+  width: 184px;
+}
+
+.modal-buttons button:hover {
+  background-color: #29a4eb;
+}
+
+.modal-buttons button:first-of-type {
+  justify-self: end;
+  margin-right: 18px;
+}
+
+#modal-toggle {
+  display: none;
+}
+
+#modal-toggle:checked + aside form {
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 100px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+#modal-toggle:checked + aside::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+
+/*
+----------------------------------------
+Buttons
+----------------------------------------
+*/
+
+button {
+  cursor: pointer;
+  display: block;
+  font: 16px Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+button.add-todo {
+  background: url("images/plus.png") 12px no-repeat;
+  border: 0;
+  color: #148fd5;
+  font-size: 1rem;
+  height: 48px;
+  padding: 0 0 0 38px;
+  text-align: left;
+  width: 100%;
+}
+
+button.add-todo:hover {
+  background-color: rgba(20, 143, 213, .04);
+}
+
+.delete button {
+  background: url("images/trash.png") right no-repeat;
+  border: 0;
+  color: transparent;
+  height: 48px;
+  width: 16px;
+  vertical-align: middle;
+}
+
+
+/*
+----------------------------------------
+Media: center the modal in the page,
+rather than inside the todo list
+----------------------------------------
+*/
+
+@media screen and (max-width: 1024px) {
+  main {
+    position: static;
+  }
+
+  #modal-toggle:checked + aside form {
+    top: 124px;
+  }
+}
+
+
+/*
+----------------------------------------
+Media: hide the nav and show 
+the responsive hamburger
+----------------------------------------
+*/
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-basis: auto;
+    width: 0;
+  }
+
+  label[for="nav-toggle"] {
+    visibility: visible;
+  }
+
+  main {
+    margin-right: 43px;
+  }
+}
+
+
+/*
+----------------------------------------
+Media: adjust the modal to
+a single column layout
+----------------------------------------
+*/
+
+@media screen and (max-width: 607px) {
+  #modal {
+    height: auto;
+    margin: 0 2.5% 16px;
+    padding: 16px 16px 48px;
+    width: 95%;
+  }
+
+  #modal-toggle:checked + aside form {
+    left: 0;
+    top: 16px;
+    transform: none;
+  }
+
+  main {
+    margin-right: 43px;
+  }
+
+  dl {
+    flex-direction: column;
+  }
+
+  dt:first-child {
+    flex-basis: 36px;
+  }
+
+  #modal select {
+    width: 100%;
+  }
+
+  input[type="text"],
+  select {
+    height: 48px;
+  }
+
+  select[name="date-day"],
+  select[name="date-month"] {
+    margin-bottom: 12px;
+  }
+
+  .select-separator {
+    display: none;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .modal-buttons button {
+    width: 100%;
+  }
+
+  .modal-buttons button:first-child {
+    margin-bottom: 8px;
+  }
+}
+
+
+/*
+----------------------------------------
+Media: adjust the nav so both the nav
+and the todo list can be seen
+on small screens
+----------------------------------------
+*/
+
+@media screen and (max-width: 550px) {
+
+  main {
+    margin-left: 8px;
+
+  }
+
+  input[name="nav-toggle"]:checked + nav {
+    flex-basis: 132px;
+  }
+
+  h2,
+  nav li {
+    font-size: 1em;
+    padding-left: 16px;
+    padding-right: 8px;
+  }
+
+  h2.all-todos,
+  h2.completed {
+    background: none;
+  }
+}

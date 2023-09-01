@@ -3,6 +3,7 @@
   <head>
     <title>Todo List</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -46,6 +47,7 @@
     </nav>
     
     <main>
+      <label for="nav-toggle">Show Navigation</label>
       <h1>02/16
         <span class="badge badge-selected">8</span>
       </h1>
@@ -124,6 +126,79 @@
           </form>
         </li>
       </ul>
+      <input type="checkbox" name="modal-toggle" id="modal-toggle">
+      <aside>
+        <form action="#" method="post" id="modal">
+          <fieldset>
+            <dl>
+              <dt>
+                <label for="title">Title</label>
+              </dt>
+              <dd>
+                <input type="text" name="title" id="title" value="Item 1">
+              </dd>
+            </dl>
+          </fieldset>
+
+          <fieldset>
+            <dl>
+              <dt>
+                <label name="date-day">Due Date</label>
+              </dt>
+              <dd>
+                <select name="date-day" id="date-day">
+                  <option value disabled selected>Day</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </dd>
+              <dt>
+                <span class="invisible">Month</span>
+                <span class="select-seperator">/</span>
+              </dt>
+              <dd>
+                <select name="date-month">
+                  <option value disabled selected>Month</option>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                </select>
+              </dd>
+              <dt>
+                <span class="invisible">Year</span>
+                <span class="select-separator">/</span>
+              </dt>
+              <dd>
+                <select name="date-year">
+                  <option value disabled selected>Year</option>
+                  <option>2019</option>
+                  <option>2020</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                </select>
+              </dd>
+            </dl>
+          </fieldset>
+
+          <fieldset>
+            <dl>
+              <dt>
+                <label for="description">Description</label>
+              </dt>
+              <dd>
+                <textarea name="description" id="description" placeholder="Description"></textarea>
+              </dd>
+            </dl>
+          </fieldset>
+          <div class="modal-buttons">
+            <button>Save</button>
+            <button formaction="#" formdmethod="post">Mark As Complete</button>
+          </div>
+        </form>
+      </aside>
     </main>
   </body>
 </html>
